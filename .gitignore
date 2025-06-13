@@ -1,0 +1,7 @@
+.vscode/
+.history/
+Brave Browser/
+# macOS
+.DS_Store
+
+node_modules/
