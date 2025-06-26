@@ -11,8 +11,15 @@ function addTask() {
   localStorage.setItem("Tasks", JSON.stringify(Task));
 
   const newTask = document.createElement("li");
-  newTask.innerText = taskInput.value;
+  newTask.textContent = taskInput.value + "";
+
+  const deleteBtn = document.createElement("i");
+  deleteBtn.className = "ri-delete-bin-line";
+  deleteBtn.id = "Delete-Btn";
+
+  newTask.appendChild(deleteBtn);
   taskList.appendChild(newTask);
+
   taskInput.value = "";
 }
 
@@ -24,7 +31,13 @@ function onPageReload() {
 
     for (let i = 0; i < allTask.length; i++) {
       const newTask = document.createElement("li");
-      newTask.innerText = allTask[i];
+      newTask.textContent = allTask[i] + "";
+
+      const deleteBtn = document.createElement("i");
+      deleteBtn.className = "ri-delete-bin-line";
+      deleteBtn.id = "Delete-Btn";
+
+      newTask.appendChild(deleteBtn);
       taskList.appendChild(newTask);
     }
   }
