@@ -23,7 +23,7 @@ body {
   height: 600px;
   width: 600px;
   /* display: flex; */
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 ol {
@@ -47,7 +47,11 @@ ol {
 
 #Task-List li {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.Delete-Btn {
+  float: right;
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
 }
